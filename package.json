@@ -1,0 +1,45 @@
+{
+    "private": true,
+    "name": "boilerplate-vue-typescript",
+    "version": "1.0.0",
+    "description": "Starter with Vue & TypeScript",
+    "license": "MIT",
+    "author": {
+        "name": "Piotr Kowalski",
+        "email": "piecioshka@gmail.com",
+        "url": "https://piecioshka.pl"
+    },
+    "scripts": {
+        "clear": "rm -rf dist/",
+        "clear:all": "rm -rf node_modules/ && npm run clear",
+        "prebuild": "npm run clear",
+        "build": "npm run build:development",
+        "build:development": "webpack --config webpack/webpack.config.js",
+        "build:production": "webpack --config webpack/webpack.config.js --env.production",
+        "watch": "npm run build:development -- -w",
+        "start": "http-server dist/ -c-1",
+        "dev": "webpack-dev-server --config webpack/webpack.config.js"
+    },
+    "devDependencies": {
+        "css-loader": "^3.6.0",
+        "file-loader": "^6.0.0",
+        "http-server": "^0.12.3",
+        "mini-css-extract-plugin": "^0.9.0",
+        "node-sass": "^4.14.1",
+        "sass-loader": "^8.0.2",
+        "style-loader": "^1.2.1",
+        "ts-loader": "^7.0.5",
+        "typescript": "^3.9.5",
+        "vue": "^2.6.11",
+        "vue-loader": "^15.9.2",
+        "vue-template-compiler": "^2.6.11",
+        "webpack": "^4.43.0",
+        "webpack-cli": "^3.3.11",
+        "webpack-dev-server": "^3.11.0",
+        "webpack-merge": "^4.2.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/piecioshka/boilerplate-vue-typescript"
+    }
+}
